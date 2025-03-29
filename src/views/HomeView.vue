@@ -1,9 +1,17 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="home">
+    <h1>AR Sofa Demo</h1>
+    <SofaViewer modelSrc="/models/sofa.glb" />
+  </div>
 </template>
+
+<script>
+import SofaViewer from '@/components/SofaViewer.vue'
+
+export default {
+  name: 'HomeView',
+  components: {
+    SofaViewer
+  }
+}
+</script>
