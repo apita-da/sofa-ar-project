@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>AR Sofa Demo</h1>
-    <SofaViewer modelSrc="modelPath" />
+    <SofaViewer :modelSrc="modelPath" />
   </div>
 </template>
 
