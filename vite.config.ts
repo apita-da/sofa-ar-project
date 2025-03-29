@@ -19,5 +19,6 @@ export default defineConfig(({ mode }) => { // Recibe el 'mode'
         '@': fileURLToPath(new URL('./src', import.meta.url))
       },
     },
+    assetsInclude: ['**/*.glb'],
   }
 })
