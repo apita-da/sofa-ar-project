@@ -23,6 +23,9 @@ export default {
       type: String,
       required: true
     }
+  },
+  mounted() {
+    import('https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js');
   }
 }
 </script>
