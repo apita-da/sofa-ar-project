@@ -1,23 +1,12 @@
 <template>
-  <div class="home">
-    <h1>AR Sofa Demo</h1>
-    <SofaViewer :modelSrc="modelPath" />
+  <div class="home-page">
+    <section>
+      <h2>Bienvenidos a la Demo</h2>
+      <button>Ir al Catalogo</button>
+    </section>
   </div>
 </template>
 
 <script>
-import SofaViewer from '@/components/SofaViewer.vue'
-import modelPath from '@/assets/models/sofa.glb'
 
-export default {
-  name: 'HomeView',
-  components: {
-    SofaViewer
-  },
-  data() {
-    return {
-      modelPath: modelPath
-    }
-  }
-}
 </script>
