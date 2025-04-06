@@ -2,7 +2,7 @@
   <div>
     <model-viewer
       class="modal-viewer"
-      :src="modelSrc"
+      :src="props.modelSrc"
       alt="Sofá"
       ar
       ar-modes="webxr scene-viewer quick-look"
@@ -15,23 +15,29 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'SofaViewer',
-  props: {
-    modelSrc: {
-      type: String,
-      required: true
-    }
+<script setup lang="ts">
+import { defineProps, onMounted } from 'vue';
+
+const props = defineProps({
+  modelSrc: {
+    type: String,
+    required: true,
   },
-  mounted() {
-    import('https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js');
-  }
+});
+
+onMounted(async () => {
+try {
+  await import('https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js');
+} catch (error) {
+  console.error('Error al cargar model-viewer:', error);
+
 }
+});
 </script>
 <style scoped>
   .modal-viewer {
-    height: 200px;
-    width: 200px;
+    height: 315px;
+    width: 100%;
+    background-color: var(--color-gray-light);
   }
 </style>

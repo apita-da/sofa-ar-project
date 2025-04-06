@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import HomeView from './views/HomeView.vue'
-</script>
-
 <template>
-  <header>
+  <header class="page-header">
     <nav class="nav-bar">
       <a href="/" class="logo">Tu Logo</a>
       <ul class="nav-bar__list">
@@ -14,11 +10,20 @@ import HomeView from './views/HomeView.vue'
   </header>
   <div class="page-container">
     <router-view />
-
   </div>
 </template>
 
+<script setup>
+import { provideDeviceType } from './composables/deviceType';
+
+provideDeviceType()
+
+</script>
+
 <style scoped>
+  .page-header, .page-container {
+    max-width: 1240px;
+  }
   .nav-bar {
     position: fixed;
     top: 0;
@@ -53,6 +58,9 @@ import HomeView from './views/HomeView.vue'
     font-weight: bold;
     font-size: 1.2em;
     color: var(--color-accent-yellow);
+  }
+  .page-container {
+    padding-top: 20px;
   }
 
 </style>
