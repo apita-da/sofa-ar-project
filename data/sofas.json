@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Sofá Azul",
+    "description": "Un sofá cómodo y elegante para tu sala de estar.",
+    "thumbnail": "src/assets/thumbnails/sofaAzul2.jpg",
+    "images":[
+      {
+        "alt": "sofa azul",
+        "path": "/src/assets/images/sofaAzul.jpg"
+      }, 
+      {
+        "alt": "sofa azul1",
+        "path": "/src/assets/images/sofaAzul2.jpg"
+      }, 
+      {
+        "alt": "sofa azul2",
+        "path": "/src/assets/images/sofaAzul.jpg"
+      }
+    ],
+    "modelPath": "/src/assets/models/sofaBlue.glb",
+    "price": 599.99
+  },
+  {
+    "id": 2,
+    "name": "Sofá con textura",
+    "description": "Un sofá de diseño contemporáneo para espacios modernos.",
+    "thumbnail": "src/assets/thumbnails/sofaTexture.jpg",
+    "images":[
+      {
+        "alt": "sofa textura",
+        "path": "/src/assets/images/sofaAzul.jpg"
+      }, 
+      {
+        "alt": "sofa textura1",
+        "path": "/src/assets/images/sofaAzul2.jpg"
+      }, 
+      {
+        "alt": "sofa textura2",
+        "path": "/src/assets/images/sofaAzul.jpg"
+      }
+    ],
+    "modelPath": "/src/assets/models/sofaTexture/source/sofaTexture.glb",
+    "price": 799.99
+  },
+  {
+    "id": 3,
+    "name": "Sofá blanco",
+    "description": "Un sofá de clasico.",
+    "thumbnail": "src/assets/thumbnails/sofaWhite.jpg",
+    "images":[
+      {
+        "alt": "sofa blanco",
+        "path": "/src/assets/images/sofaAzul.jpg"
+      }, 
+      {
+        "alt": "sofa blanco1",
+        "path": "/src/assets/images/sofaAzul2.jpg"
+      }, 
+      {
+        "alt": "sofa blanco2",
+        "path": "/src/assets/images/sofaAzul.jpg"
+      }
+    ],
+    "modelPath": "/src/assets/models/sofaWhite.glb",
+    "price": 699.99
+  }
+]
