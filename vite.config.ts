@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
 const env = loadEnv(mode, process.cwd(), '')
 
 return {
-  base: env.NODE_ENV === 'production' ? '/sofa-ar-project/' : '/',
+  base: '/',
   plugins: [
     vue({
       template: {

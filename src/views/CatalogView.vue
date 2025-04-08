@@ -75,7 +75,7 @@ const { deviceType, isMobile, isTablet, isDesktop } = injectDeviceType()
 
 
 
-const { data: sofas, isLoading, error } = useData<Sofa[]>('https://github.com/apita-da/sofa-ar-project/blob/152677a713e48067e9ad73f46552edda92b3cb65/public/data/sofas.json');
+const { data: sofas, isLoading, error } = useData<Sofa[]>('/data/sofas.json');
 
 const products = sofas;
 const modules = [Navigation, Pagination];
@@ -127,7 +127,7 @@ const closeModal = () => {
   flex-flow: column;
 
   align-items: flex-start;
-  margin: 200px auto;
+  margin: 10% auto;
 }
 .modal-header {
   display: flex;
