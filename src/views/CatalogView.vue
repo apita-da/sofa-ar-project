@@ -18,7 +18,7 @@
     </div>
 
     <teleport to="body">
-      <div v-if="selectedProduct" class="modal">
+      <div v-if="selectedProduct" class="modal"  :class="{ 'modal-bottom': isMobile }">
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title">{{ selectedProduct.name }}</h2>
@@ -93,7 +93,8 @@ const openModal = (product: Sofa) => {
 const closeModal = () => {
   selectedProduct.value = null;
 }
-
+//TODO: get heigth of slide to apply to model-viewer
+//TODO: in mobile show button to AR and hide modelviewer if posible. Modal 100% full screen
 </script>
 
 <style scoped>
@@ -113,21 +114,23 @@ const closeModal = () => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  max-width: 75%;
+  max-width: 60%;
   min-height: 200px;
   padding: 20px;
   background-color: white;
   display: flex;
   flex-flow: column;
-
   align-items: flex-start;
   margin: 10% auto;
+  overflow-y: auto;
 }
 .modal-header {
   display: flex;
@@ -163,4 +166,22 @@ const closeModal = () => {
   aspect-ratio: 16/9;
 }
 
+.modal.modal-bottom {
+  align-items: flex-end;
+}
+
+.modal.modal-bottom .modal-content {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+body.is-mobile {
+  .product-img {
+
+  aspect-ratio: 1/1;
+}
+}
 </style>
